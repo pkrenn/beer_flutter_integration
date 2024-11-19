@@ -26,13 +26,11 @@ class MyApp extends StatelessWidget {
 class SwiftUIPipView extends StatelessWidget {
   const SwiftUIPipView({super.key});
 
-  static const platform = MethodChannel('samples.flutter.dev/beer');
+  static const platform = MethodChannel('com.lab73/beer');
 
   _sendBeer() async {
-    debugPrint("Requesting Beer!");
     try {
-      final success = await platform.invokeMethod<bool>('sendBeer');
-      debugPrint("Sucessfully sent some beer request: $success");
+      await platform.invokeMethod<bool>('sendBeer');
     } on PlatformException catch (e) {
       debugPrint("Failed to get beer: '${e.message}'.");
     }
@@ -45,12 +43,18 @@ class SwiftUIPipView extends StatelessWidget {
   }
 
   _updateBeer() async {
-    debugPrint("Updating Beer!");
     try {
-      final success = await platform.invokeMethod<bool>('updateBeer');
-      debugPrint("Sucessfully updated some beer request: $success");
+      await platform.invokeMethod<bool>('updateBeer');
     } on PlatformException catch (e) {
-      debugPrint("Failed to get beer: '${e.message}'.");
+      debugPrint("Failed to update beer: '${e.message}'.");
+    }
+  }
+
+  _cancelBeer() async {
+    try {
+      await platform.invokeMethod<bool>('cancelBeer');
+    } on PlatformException catch (e) {
+      debugPrint("Failed to update beer: '${e.message}'.");
     }
   }
 
@@ -72,6 +76,12 @@ class SwiftUIPipView extends StatelessWidget {
                 _startTimerForBeer();
               },
               child: const Text("Update my beer!"),
+            ),
+            TextButton(
+              onPressed: () {
+                _cancelBeer();
+              },
+              child: const Text("Cancel my beer!"),
             ),
             const Spacer(),
           ],

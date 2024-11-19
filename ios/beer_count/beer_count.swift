@@ -72,17 +72,17 @@ struct TimerActivityView: View {
             .frame(height: 20)
             .padding(.horizontal, 10)
             
-        
+            
             ZStack {
                 ProgressView(value: CGFloat(context.state.progress), total: 100)
                     .tint(.pink)
                     .background(.white)
                 GeometryReader { geometry in
-
-                                Text("🍺")
-                                    .position(x: 5, y: geometry.size.height / 2)
-                                    .offset(x: CGFloat(geometry.size.width / 100 * CGFloat(context.state.progress)), y: 0)
-                        }
+                    
+                    Text("🍺")
+                        .position(x: 5, y: geometry.size.height / 2)
+                        .offset(x: CGFloat(geometry.size.width / 100 * CGFloat(context.state.progress)), y: 0)
+                }
             }.frame(height: 20).padding(.horizontal, 10)
         }
         .frame(height: 160)
@@ -107,11 +107,11 @@ struct TimerDynamicIsland {
                         .tint(.pink)
                         .background(.white)
                     GeometryReader { geometry in
-
-                                    Text("🍺")
-                                        .position(x: 5, y: geometry.size.height / 2)
-                                        .offset(x: CGFloat(geometry.size.width / 100 * CGFloat(context.state.progress)), y: 0)
-                            }
+                        
+                        Text("🍺")
+                            .position(x: 5, y: geometry.size.height / 2)
+                            .offset(x: CGFloat(geometry.size.width / 100 * CGFloat(context.state.progress)), y: 0)
+                    }
                 }.frame(height: 20).padding(.horizontal, 10)
             }
             DynamicIslandExpandedRegion(.bottom) {
@@ -149,7 +149,7 @@ struct TimerDynamicIsland {
 
 struct BeerCountWidget: Widget {
     let kind: String = "BeerCountWidget"
-
+    
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: BeerWidgetAttributes.self) { context in
             TimerActivityView(context: context)
