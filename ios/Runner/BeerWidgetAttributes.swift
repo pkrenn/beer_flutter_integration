@@ -8,7 +8,7 @@
 import ActivityKit
 import SwiftUI
 
-struct TimerAttributes: ActivityAttributes{
+struct BeerWidgetAttributes: ActivityAttributes{
     public typealias TimerStatus = ContentState
     
     public struct ContentState: Codable, Hashable{

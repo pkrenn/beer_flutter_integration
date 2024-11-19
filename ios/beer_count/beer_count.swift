@@ -20,7 +20,7 @@ import ActivityKit
 import Combine
 
 struct TimerActivityView: View {
-    let context: ActivityViewContext<TimerAttributes>
+    let context: ActivityViewContext<BeerWidgetAttributes>
     
     var body: some View {
         VStack(alignment: .center) {
@@ -29,28 +29,32 @@ struct TimerActivityView: View {
                     Image(systemName: "takeoutbag.and.cup.and.straw.fill")
                         .resizable().aspectRatio(contentMode: .fit)
                         .frame(width: 14, height: 14)
-                        .foregroundColor(.pink)
+                        .foregroundColor(.white)
                     
                     Spacer()
                     
                     Text("~ 1 Min")
                         .font(.system(size: 14))
                         .bold()
+                        .foregroundStyle(Color.white)
                 }
                 .padding(.horizontal, 10)
                 
                 Text("Dein Bier ist unterwegs!")
                     .font(.system(size: 20))
                     .bold()
+                    .foregroundStyle(Color.white)
             }
             
             HStack {
                 VStack(alignment: .leading) {
                     Text("Vom")
                         .font(.system(size: 8))
+                        .foregroundStyle(Color.white)
                     Text("Kühlschrank")
                         .font(.system(size: 14))
                         .bold()
+                        .foregroundStyle(Color.white)
                 }
                 
                 Spacer()
@@ -58,9 +62,11 @@ struct TimerActivityView: View {
                 VStack(alignment: .trailing) {
                     Text("Zu")
                         .font(.system(size: 8))
+                        .foregroundStyle(Color.white)
                     Text("Dir!")
                         .font(.system(size: 14))
                         .bold()
+                        .foregroundStyle(Color.white)
                 }
             }
             .frame(height: 20)
@@ -91,7 +97,7 @@ struct TimerActivityView: View {
 
 // Extracted DynamicIsland Configuration
 struct TimerDynamicIsland {
-    let context: ActivityViewContext<TimerAttributes>
+    let context: ActivityViewContext<BeerWidgetAttributes>
     
     func dynamicIsland() -> DynamicIsland {
         DynamicIsland {
@@ -145,7 +151,7 @@ struct BeerCountWidget: Widget {
     let kind: String = "BeerCountWidget"
 
     var body: some WidgetConfiguration {
-        ActivityConfiguration(for: TimerAttributes.self) { context in
+        ActivityConfiguration(for: BeerWidgetAttributes.self) { context in
             TimerActivityView(context: context)
         } dynamicIsland: { context in
             TimerDynamicIsland(context: context).dynamicIsland()

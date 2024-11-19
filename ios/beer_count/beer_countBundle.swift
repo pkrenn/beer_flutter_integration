@@ -12,7 +12,5 @@ import SwiftUI
 struct beer_countBundle: WidgetBundle {
     var body: some Widget {
         BeerCountWidget()
-        beer_countControl()
-        beer_countLiveActivity()
     }
 }

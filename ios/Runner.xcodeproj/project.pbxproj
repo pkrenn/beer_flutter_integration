@@ -3,20 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
-		3C6422A82CEB2FD50091A599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6422A62CEB2FD50091A599 /* ContentView.swift */; };
-		3C6422B82CEB30800091A599 /* FLNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6422B72CEB307B0091A599 /* FLNativeView.swift */; };
-		3CCDA3C82CEC8D01000FC403 /* TimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6423142CEB439C0091A599 /* TimerAttributes.swift */; };
+		3CCDA3C82CEC8D01000FC403 /* BeerWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6423142CEB439C0091A599 /* BeerWidgetAttributes.swift */; };
 		3CCDA4142CECB207000FC403 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6422C62CEB37340091A599 /* WidgetKit.framework */; };
 		3CCDA4152CECB207000FC403 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6422C82CEB37340091A599 /* SwiftUI.framework */; };
 		3CCDA4242CECB20A000FC403 /* beer_countExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3CCDA4132CECB207000FC403 /* beer_countExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3CCDA42B2CECB21A000FC403 /* TimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6423142CEB439C0091A599 /* TimerAttributes.swift */; };
+		3CCDA42B2CECB21A000FC403 /* BeerWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6423142CEB439C0091A599 /* BeerWidgetAttributes.swift */; };
+		3CCDA45D2CECBFC0000FC403 /* ActivityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCDA45C2CECBFC0000FC403 /* ActivityHandler.swift */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -70,12 +69,11 @@
 		331C807B294A618700263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
 		331C8081294A63A400263BE5 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
-		3C6422A62CEB2FD50091A599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3C6422B72CEB307B0091A599 /* FLNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLNativeView.swift; sourceTree = "<group>"; };
 		3C6422C62CEB37340091A599 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3C6422C82CEB37340091A599 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		3C6423142CEB439C0091A599 /* TimerAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAttributes.swift; sourceTree = "<group>"; };
+		3C6423142CEB439C0091A599 /* BeerWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerWidgetAttributes.swift; sourceTree = "<group>"; };
 		3CCDA4132CECB207000FC403 /* beer_countExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = beer_countExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CCDA45C2CECBFC0000FC403 /* ActivityHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHandler.swift; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
@@ -175,8 +173,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				3C6422B72CEB307B0091A599 /* FLNativeView.swift */,
-				3C6422A62CEB2FD50091A599 /* ContentView.swift */,
+				3CCDA45C2CECBFC0000FC403 /* ActivityHandler.swift */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -185,7 +182,7 @@
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
-				3C6423142CEB439C0091A599 /* TimerAttributes.swift */,
+				3C6423142CEB439C0091A599 /* BeerWidgetAttributes.swift */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -373,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCDA42B2CECB21A000FC403 /* TimerAttributes.swift in Sources */,
+				3CCDA42B2CECB21A000FC403 /* BeerWidgetAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,10 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C6422A82CEB2FD50091A599 /* ContentView.swift in Sources */,
-				3C6422B82CEB30800091A599 /* FLNativeView.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
-				3CCDA3C82CEC8D01000FC403 /* TimerAttributes.swift in Sources */,
+				3CCDA3C82CEC8D01000FC403 /* BeerWidgetAttributes.swift in Sources */,
+				3CCDA45D2CECBFC0000FC403 /* ActivityHandler.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
